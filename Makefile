@@ -20,7 +20,7 @@ test_v:
 	docker-compose run --rm api sh -c "pytest -s -v"
 
 start_front:
-	@echo "Start front end"
+	@echo "Starting front end"
 	@cd front && npm run serve
 
 start_back:
