@@ -12,7 +12,8 @@
               <div class="mb-3">
                 <label for="input_url" class="form-label">Enter long url</label>
                 <input
-                  type="text"
+                  type="url"
+                  placeholder="https://www.example.com"
                   class="form-control form-control-lg"
                   autocomplete="off"
                   id="input_url"
