@@ -18,3 +18,13 @@ tests:
 
 test_v:
 	docker-compose run --rm api sh -c "pytest -s -v"
+
+start_front:
+	@echo "Start front end"
+	@cd front && npm run serve
+
+start_back:
+	@echo "Starting back end"
+	docker-compose up -d
+
+back_front: start_back start_front
