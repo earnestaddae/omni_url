@@ -1,6 +1,9 @@
 lint:
 	docker-compose run --rm api sh -c "flake8"
 
+build_image:
+	docker build .
+
 docker_build:
 	docker-compose build
 

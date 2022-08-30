@@ -1,6 +1,8 @@
 asgiref==3.5.2
 attrs==22.1.0
+cfgv==3.3.1
 coverage==6.4.4
+distlib==0.3.6
 Django==4.1
 django-cors-headers==3.13.0
 django-coverage-plugin==2.0.3
@@ -8,12 +10,16 @@ django-extensions==3.2.0
 djangorestframework==3.13.1
 drf-spectacular==0.23.1
 execnet==1.9.0
+filelock==3.8.0
 flake8==5.0.4
+identify==2.5.3
 inflection==0.5.1
 iniconfig==1.1.1
 jsonschema==4.14.0
 mccabe==0.7.0
+nodeenv==1.7.0
 packaging==21.3
+platformdirs==2.5.2
 pluggy==1.0.0
 psycopg2==2.9.3
 py==1.11.0
@@ -31,5 +37,7 @@ pytz==2022.2.1
 PyYAML==6.0
 six==1.16.0
 sqlparse==0.4.2
+toml==0.10.2
 tomli==2.0.1
 uritemplate==4.1.1
+virtualenv==20.16.4
