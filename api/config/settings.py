@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     
     # Local apps
     'core',
+    'urlshortener',
     
     #3rd party apps
     'rest_framework',

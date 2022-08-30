@@ -10,5 +10,8 @@ docker_up:
 docker_down:
 	docker-compose down
 
+migrate_up:
+	docker-compose run --rm api sh -c "python manage.py makemigrations && python manage.py migrate"
+
 tests:
-	docker-compose run --rm api sh -c "pytest -v -s"
+	docker-compose run --rm api sh -c "pytest"
