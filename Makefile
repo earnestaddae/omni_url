@@ -15,3 +15,6 @@ migrate_up:
 
 tests:
 	docker-compose run --rm api sh -c "pytest"
+
+test_v:
+	docker-compose run --rm api sh -c "pytest -s -v"

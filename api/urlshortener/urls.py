@@ -7,4 +7,5 @@ app_name = 'urlshortener'
 
 urlpatterns = [
     path('create/', views.CreateShortURLView.as_view(), name='create'),
+    path('<str:url_key>/', views.RedirectShortURLView.as_view(), name='redirect'),
 ]
