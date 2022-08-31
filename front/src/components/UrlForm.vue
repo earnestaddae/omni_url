@@ -103,7 +103,6 @@ export default {
         .then((response) => {
           this.short_url = response.short_url;
         });
-      this.input_url = "";
     },
   },
 };
