@@ -56,5 +56,4 @@ Ensure the following are installed
 - Start testing by entering a long_url to be shortened
 
 ## Demo
-## Project homepage
 ![OmniUrl](https://github.com/earnestaddae/omni_url/blob/main/url_shortener.gif)
