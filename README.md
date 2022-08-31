@@ -54,3 +54,7 @@ Ensure the following are installed
 - Visit `http://localhost:8000/api/docs` to view the endpoints
 - Runs on `http://localhost:8080/`to see the front page
 - Start testing by entering a long_url to be shortened
+
+## Demo
+## Project homepage
+![OmniUrl](https://github.com/earnestaddae/omni_url/blob/main/url_shortener.gif)
