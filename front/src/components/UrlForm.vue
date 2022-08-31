@@ -20,9 +20,15 @@
                   name="input_url"
                   v-model.trim="input_url"
                   aria-describedby="input_url_help"
+                  @blur="validateInput"
                 />
+                <div v-if="is_invalid" class="text-danger">
+                  Url must be provided
+                </div>
+                <div v-else-if="is_valid_url" class="text-danger">
+                  The url is invalid
+                </div>
               </div>
-
               <button type="submit" class="btn btn-primary">
                 Generate Short Url
               </button>
@@ -62,9 +68,21 @@ export default {
     return {
       input_url: "",
       short_url: "",
+      is_invalid: false,
+      is_valid_url: false,
+      valid_url: /^(ftp|http|https):\/\/[^ "]+$/,
     };
   },
   methods: {
+    validateInput() {
+      if (this.input_url == "") {
+        this.is_invalid = !this.is_invalid;
+      } else {
+        if (!this.valid_url.test(this.input_url)) {
+          this.is_valid_url = !this.is_valid_url;
+        }
+      }
+    },
     submitForm() {
       const headers = new Headers();
       headers.append("Content-Type", "application/json");
