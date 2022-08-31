@@ -19,6 +19,7 @@ Ensure the following are installed
 
 ## Cloning Instructions
 - Clone the repo into any directory of yours with `git clone git@github.com:earnestaddae/omni_url.git`
+- Although not required for docker, it is recommended to create a virtual environment
 
 ## Running Local Instructions
 - Create a python virtual environment with `pyenv virtualenv 3.10.5 omnihr && pyenv activate omnihr`
