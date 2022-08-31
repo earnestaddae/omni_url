@@ -9,8 +9,7 @@ class LongURLSerializer(serializers.ModelSerializer):
 
     def get_short_url(self, obj):
         request = self.context["request"]
-        url = LongURL.objects.filter(url_key=obj.url_key).first()
-        return f'{request.build_absolute_uri("/")}{url.url_key}'
+        return f'{request.build_absolute_uri("/")}{obj.url_key}'
 
     class Meta:
         model = LongURL
