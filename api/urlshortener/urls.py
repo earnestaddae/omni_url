@@ -1,6 +1,6 @@
 """URL mapping for URLShortner"""
 
-from django.urls import path 
+from django.urls import path
 from urlshortener import views
 
 app_name = 'urlshortener'
