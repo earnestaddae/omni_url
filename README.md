@@ -27,6 +27,7 @@ Ensure the following are installed
 - Run `createdb omnihrdb` to create database
 - Run `cd api` to change directory to the api directory
 - Run `python manage.py makemigrations && python manage.py migrate`
+- Run `pytest -s -v` to run pytest in verbose mode
 - Run `python manage.py runserver`
 - Visit `http://localhost:8000/api/docs/` to view the endpoints
 - Make sure you are in the `front` directory and run `npm install` to install dependencies
