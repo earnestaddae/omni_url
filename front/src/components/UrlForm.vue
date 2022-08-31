@@ -84,6 +84,7 @@ export default {
       }
     },
     submitForm() {
+      this.validateInput();
       const headers = new Headers();
       headers.append("Content-Type", "application/json");
       const userData = {
