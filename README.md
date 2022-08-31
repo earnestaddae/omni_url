@@ -22,12 +22,19 @@ Ensure the following are installed
 
 ## Running Local Instructions
 - Create a python virtual environment with `pyenv virtualenv 3.10.5 omnihr && pyenv activate omnihr`
+- Run `pip install --upgrade pip` to upgrade your pip
 - Run `pip install -r requirements.txt`
 - Run `createdb omnihrdb` to create database
+- Run `cd api` to change directory to the api directory
 - Run `python manage.py makemigrations && python manage.py migrate`
 - Run `python manage.py runserver`
+- Visit `http://localhost:8000/api/docs/` to view the endpoints
+- Make sure you are in the `front` directory and run `npm install` to install dependencies
+- Run `npm run serve` to start the vue frontend
+- Visit `http://localhost:8080/` to see the front page
+- Start testing by entering a long_url to be shortened
 
-## Docker Instructions
+## Runing Docker Instructions
 - Run `make help` to view the make commands
 - Change directory into the **front** directory and run `npm install` to get the node_modules for vue
 - Run `make build_image` to create a docker image for the api
@@ -38,15 +45,10 @@ Ensure the following are installed
 - Run `make tests` to run tests 
 - Run `make test_v` to run tests in verbose mode
 
-## Running Instructions 
+## Docker Running Instructions 
 - Run `make start_back` to start the api 
 - Run  `make start_front` to start the frontend
 - Run  `make back_front` to start both the back and front ends
-
-## Visiting Instructions
-- ### Backend
-    - Runs on `http://localhost:8000`
-    - Visit `http://localhost:8000/api/docs` to view the endpoints
-- ### Frontend 
-Runs on `http://localhost:8080`
-
+- Visit `http://localhost:8000/api/docs` to view the endpoints
+- Runs on `http://localhost:8080/`to see the front page
+- Start testing by entering a long_url to be shortened
