@@ -89,9 +89,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'HOST': os.environ.get('DB_HOST'),
-        'NAME': os.environ.get('DB_NAME'),
-        'USER': os.environ.get('DB_USER'),
-        'PASSWORD': os.environ.get('DB_PASS'),
+        'NAME': os.environ.get('DB_NAME', default="omnihrdb"),
+        'USER': os.environ.get('DB_USER', default="postgres"),
+        'PASSWORD': os.environ.get('DB_PASS', default="postgres"),
     }
 }
 
@@ -144,21 +144,9 @@ REST_FRAMEWORK = {
         'user': '60/min',
     }
 }
-# CORS_URLS_REGEX = r"^/api/.*$"
-# CORS_ALLOWED_ORIGINS = [
-#     "http://localhost:8080/",
-#     "http//localhost"
-# ]
+
 CORS_ALLOWED_ORIGINS = [
     "http://localhost",
     "http://localhost:8080"
 ]
-# CORS_ALLOWED_ORIGINS = os.environ.get("CORS_ALLOWED_ORIGINS", default=["http://localhost"])
-# CORS_ALLOW_HEADERS = list(default_headers) + [
-#     "access-control-allow-origin",
-#     "access-control-allow-headers",
-#     "access-control-allow-credentials",
-#     "access-control-allow-methods",
-# ]
-# CORS_ALLOW_CREDENTIALS = False
 
