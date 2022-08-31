@@ -4,12 +4,12 @@ A simple url shortener with django rest framework api and vue3 as frontend
 
 ## Installations
 Ensure the following are installed
-- [Python v3.10.5]() 
-- [Pyenv]()
-- [Docker]()
-- [nodejs]()
+- [Python v3.10.5](https://www.python.org/downloads/) 
+- [Pyenv](https://github.com/pyenv/pyenv)
+- [Docker](https://www.docker.com/)
+- [nodejs](https://nodejs.org/en/download/)
 - vue3 with `sudo npm install -g @vue/cli`
-- [Postgresql]()
+- [Postgresql](https://www.postgresql.org/download/)
 - Ensure you have make install for 
     - Ubuntu - `sudo apt install make`
     - MacOS - `brew install make`
@@ -21,7 +21,7 @@ Ensure the following are installed
 - Clone the repo into any directory of yours with `git clone git@github.com:earnestaddae/omni_url.git`
 
 ## Running Local Instructions
-- Create a python virtual environment
+- Create a python virtual environment with `pyenv virtualenv 3.10.5 omnihr && pyenv activate omnihr`
 - Run `pip install -r requirements.txt`
 - Run `createdb omnihrdb` to create database
 - Run `python manage.py makemigrations && python manage.py migrate`
