@@ -8,10 +8,10 @@ def create_random_url_key(length=8):
     return "".join(secrets.choice(chars) for _ in range(length))
 
 
-def create_unique_random_url_key(obj):
+def create_unique_random_url_key(obj, length):
     """Generates a unique random key for the same long_url objects"""
-    random_url_key = create_random_url_key()
+    random_url_key = create_random_url_key(length)
     model_class = obj.__class__
-    if model_class.objects.filter(url_key=random_url_key).exists():
-        return create_unique_random_url_key()
+    while model_class.objects.filter(url_key=random_url_key).exists():
+        random_url_key = create_random_url_key(length) 
     return random_url_key

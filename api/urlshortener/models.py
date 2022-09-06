@@ -9,7 +9,7 @@ class LongURL(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.url_key:
-            self.url_key = utils.create_unique_random_url_key(self)
+            self.url_key = utils.create_unique_random_url_key(self, 8)
         super().save(*args, **kwargs)
 
     class Meta:

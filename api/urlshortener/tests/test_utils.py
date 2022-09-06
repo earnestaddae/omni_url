@@ -18,7 +18,7 @@ class TestUtils:
     def test_create_unique_random_url_key(self):
         url_obj_1 = models.LongURL.objects.create(long_url="https://www.example.com")
         url_obj_2 = models.LongURL.objects.create(long_url="https://www.example.com")
-        url_key_1 = utils.create_unique_random_url_key(url_obj_1)
-        url_key_2 = utils.create_unique_random_url_key(url_obj_2)
+        url_key_1 = utils.create_unique_random_url_key(url_obj_1, 8)
+        url_key_2 = utils.create_unique_random_url_key(url_obj_2, 8)
         assert len(url_key_1) == len(url_key_2)
         assert url_key_1 != url_key_2
