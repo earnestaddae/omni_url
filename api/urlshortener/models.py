@@ -4,7 +4,7 @@ from urlshortener import utils
 
 class LongURL(models.Model):
     long_url = models.URLField(blank=False, null=False)
-    url_key = models.CharField(max_length=10, help_text="key to the long url", unique=True)
+    url_key = models.CharField(max_length=8, help_text="key to the long url", unique=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def save(self, *args, **kwargs):
