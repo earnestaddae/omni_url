@@ -15,8 +15,6 @@ class CreateShortURLView(generics.CreateAPIView):
 
 class RedirectShortURLView(generics.RetrieveAPIView):
     """Retrieves and redirects to long_url based on url_key"""
-    queryset = LongURL.objects.all()
-    serializer_class = LongURLSerializer
     lookup_field = "url_key"
 
     def retrieve(self, *args, **kwargs):
